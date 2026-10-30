@@ -1,0 +1,26 @@
+{
+  "common": {
+    "title": "共通",
+    "shortcuts": [
+      { "key": "Ctrl + N", "description": "新しいメッセージ", "category": "共通" },
+      { "key": "Ctrl + F", "description": "検索", "category": "共通" },
+      { "key": "Ctrl + Shift + F", "description": "高度な検索", "category": "共通" }
+    ]
+  },
+  "mail-list": {
+    "title": "メール一覧",
+    "shortcuts": [
+      { "key": "↑ / ↓", "description": "メッセージを移動", "category": "メール一覧" },
+      { "key": "Enter", "description": "メッセージを開く", "category": "メール一覧" },
+      { "key": "Delete", "description": "メッセージを削除", "category": "メール一覧" },
+      { "key": "R", "description": "返信", "category": "メール一覧" },
+      { "key": "F", "description": "転送", "category": "メール一覧" }
+    ]
+  },
+  "unknown": {
+    "title": "その他",
+    "shortcuts": [
+      { "key": "Ctrl + ?", "description": "この画面で使えるショートカットを確認", "category": "その他" }
+    ]
+  }
+}

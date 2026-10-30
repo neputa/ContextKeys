@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ContextKeys</title>
+    <link rel="stylesheet" href="shortcut-dialog.css" />
+  </head>
+  <body>
+    <main class="dialog" aria-labelledby="dialog-title">
+      <header class="header">
+        <h1 id="dialog-title">Thunderbird ショートカット</h1>
+        <p id="context-label" class="context-label">現在のコンテキスト: 取得中...</p>
+      </header>
+
+      <label class="search-label" for="shortcut-search">ショートカットを検索</label>
+      <input
+        id="shortcut-search"
+        type="search"
+        autocomplete="off"
+        placeholder="例: 返信"
+        aria-label="ショートカットを検索"
+      />
+
+      <section id="shortcut-list" class="shortcut-list" aria-live="polite"></section>
+    </main>
+
+    <script src="shortcut-dialog.js"></script>
+  </body>
+</html>

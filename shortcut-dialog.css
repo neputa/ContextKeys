@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f6f7fb;
+  color: #1f2937;
+}
+
+.dialog {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 20px 20px 26px;
+}
+
+.header {
+  margin-bottom: 16px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 1.4rem;
+}
+
+.context-label {
+  margin: 0;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.search-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+#shortcut-search {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  margin-bottom: 18px;
+}
+
+.shortcut-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.group {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.group h2 {
+  margin: 0;
+  padding: 12px 14px;
+  background: #eef2ff;
+  font-size: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.shortcut-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.shortcut-item {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 10px;
+  padding: 12px 14px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.shortcut-item:last-child {
+  border-bottom: none;
+}
+
+.key {
+  font-weight: 700;
+  color: #1d4ed8;
+  background: #eff6ff;
+  border-radius: 6px;
+  padding: 4px 8px;
+  text-align: center;
+  justify-self: start;
+}
+
+.description {
+  line-height: 1.5;
+}
+
+.empty-state {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  color: #4b5563;
+}
