@@ -34,7 +34,7 @@ async function detectContext() {
 
     // タイトルベースの判定（優先度高）
     const titleLower = title.toLowerCase();
-    
+
     // カレンダー
     if (titleLower.includes('calendar') || title.includes('カレンダー') || url.includes('about:calendar')) {
       console.log('ContextKeys: detected calendar context');
@@ -42,7 +42,7 @@ async function detectContext() {
     }
 
     // タスク/ToDo（タイトルで最初に判定）
-    if (titleLower.includes('todo') || titleLower.includes('task') || 
+    if (titleLower.includes('todo') || titleLower.includes('task') ||
         title.includes('タスク') || title.includes('やること') ||
         url.includes('about:tasks')) {
       console.log('ContextKeys: detected tasks context');
@@ -68,7 +68,7 @@ async function detectContext() {
     }
 
     // 空のURLで、タイトルが "受信トレイ" など メール関連の場合
-    if (url === '' && (title.includes('受信トレイ') || title.includes('フォルダー') || 
+    if (url === '' && (title.includes('受信トレイ') || title.includes('フォルダー') ||
         titleLower.includes('inbox') || titleLower.includes('mail'))) {
       console.log('ContextKeys: detected mail context (empty url + title)');
       return 'mail';
