@@ -4,6 +4,7 @@ Thumbs.db
 
 # Editor
 .vscode/
+.idea/
 
 # Temporary files
 *.tmp
@@ -11,3 +12,10 @@ Thumbs.db
 
 # Packaging outputs
 *.xpi
+dist/
+build/
+
+# Node modules (if using npm)
+node_modules/
+package-lock.json
+
