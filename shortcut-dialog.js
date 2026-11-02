@@ -67,22 +67,40 @@ function applyFilter() {
   const query = searchInput.value.trim().toLowerCase();
   const groups = Array.from(document.querySelectorAll('.group'));
 
+  if (query === '') {
+    // No search query: show all groups and items
+    groups.forEach((group) => {
+      group.style.display = '';
+      group.querySelectorAll('.shortcut-item').forEach((item) => {
+        item.style.display = '';
+      });
+    });
+    return;
+  }
+
+  // Filter groups and items
+  let hasVisibleItems = false;
   groups.forEach((group) => {
     const items = group.querySelectorAll('.shortcut-item');
     let visibleCount = 0;
 
     items.forEach((item) => {
       const text = item.textContent.toLowerCase();
-      const shouldShow = !query || text.includes(query);
-      item.hidden = !shouldShow;
+      const shouldShow = text.includes(query);
+      item.style.display = shouldShow ? '' : 'none';
       if (shouldShow) visibleCount += 1;
     });
 
-    group.hidden = visibleCount === 0;
+    if (visibleCount > 0) {
+      group.style.display = '';
+      hasVisibleItems = true;
+    } else {
+      group.style.display = 'none';
+    }
   });
 
-  const visibleGroups = groups.filter((group) => !group.hidden);
-  if (visibleGroups.length === 0) {
+  // Show empty state if no results
+  if (!hasVisibleItems) {
     shortcutList.innerHTML = '<div class="empty-state">該当するショートカットはありません。</div>';
   }
 }

@@ -14,8 +14,7 @@
   },
   "permissions": [
     "activeTab",
-    "tabs",
-    "windows"
+    "tabs"
   ],
   "commands": {
     "show-shortcuts": {
