@@ -23,15 +23,16 @@ async function detectContext() {
     const activeTab = tabs[0] || {};
     const url = activeTab.url || '';
 
-    // メール関連（一覧、表示、作成）をすべて「mail」に統合
-    // メール作成: popup ウィンドウ、compose URL、空 URL
-    if (currentWindow.type === 'popup' || url.includes('compose') || url === '') {
-      return 'mail';
+    console.log('ContextKeys: detected URL:', url);
+
+    // カレンダー（最初にチェック）
+    if (url.includes('about:calendar')) {
+      return 'calendar';
     }
 
-    // メール一覧・表示: mailbox、imap、message など
-    if (/^(mailbox|imap|nntp|pop|news|message):\/\//i.test(url) || /message|thread|mail/.test(url)) {
-      return 'mail';
+    // タスク（次にチェック）
+    if (url.includes('about:tasks')) {
+      return 'tasks';
     }
 
     // アドレス帳
@@ -39,14 +40,14 @@ async function detectContext() {
       return 'address-book';
     }
 
-    // カレンダー
-    if (url.includes('calendar') || url.includes('about:calendar')) {
-      return 'calendar';
+    // メール一覧・表示: プロトコルベースの判定のみ
+    if (/^(mailbox|imap|nntp|pop|news|message):\/\//i.test(url)) {
+      return 'mail';
     }
 
-    // タスク
-    if (url.includes('task') || url.includes('about:tasks')) {
-      return 'tasks';
+    // メール作成: popup ウィンドウ、compose URL、空 URL
+    if (currentWindow.type === 'popup' || url.includes('compose') || url === '') {
+      return 'mail';
     }
 
     return 'common';
