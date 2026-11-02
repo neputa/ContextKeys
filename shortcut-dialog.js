@@ -3,6 +3,7 @@ const selectedContext = params.get('context') || 'common';
 const contextLabel = document.querySelector('#context-label');
 const searchInput = document.querySelector('#shortcut-search');
 const shortcutList = document.querySelector('#shortcut-list');
+let originalHtml = ''; // Store original HTML to restore after search
 
 function escapeHtml(value) {
   return value
@@ -38,6 +39,7 @@ function renderGroups(contextInfo, data) {
 
   if (currentGroups.length === 0) {
     shortcutList.innerHTML = '<div class="empty-state">該当するショートカットはありません。</div>';
+    originalHtml = '';
     return;
   }
 
@@ -60,26 +62,32 @@ function renderGroups(contextInfo, data) {
   }).join('');
 
   shortcutList.innerHTML = html;
+  originalHtml = html; // Save original HTML
   applyFilter();
 }
 
 function applyFilter() {
   const query = searchInput.value.trim().toLowerCase();
-  const groups = Array.from(document.querySelectorAll('.group'));
-
+  
   if (query === '') {
-    // No search query: show all groups and items
-    groups.forEach((group) => {
-      group.style.display = '';
-      group.querySelectorAll('.shortcut-item').forEach((item) => {
-        item.style.display = '';
-      });
-    });
+    // No search query: restore original HTML
+    if (originalHtml) {
+      shortcutList.innerHTML = originalHtml;
+    }
     return;
   }
 
+  // Restore original HTML if it was replaced with empty-state
+  if (!shortcutList.querySelector('.group')) {
+    if (originalHtml) {
+      shortcutList.innerHTML = originalHtml;
+    }
+  }
+
   // Filter groups and items
+  const groups = Array.from(document.querySelectorAll('.group'));
   let hasVisibleItems = false;
+  
   groups.forEach((group) => {
     const items = group.querySelectorAll('.shortcut-item');
     let visibleCount = 0;
