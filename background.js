@@ -39,6 +39,16 @@ async function detectContext() {
       return 'address-book';
     }
 
+    // カレンダー
+    if (url.includes('calendar') || url.includes('about:calendar')) {
+      return 'calendar';
+    }
+
+    // タスク
+    if (url.includes('task') || url.includes('about:tasks')) {
+      return 'tasks';
+    }
+
     return 'common';
   } catch (error) {
     console.error('ContextKeys: detectContext error:', error);

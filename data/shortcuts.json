@@ -62,5 +62,68 @@
       { "key": "Ctrl + K", "description": "リンク", "section": "書式" },
       { "key": "Shift + Enter", "description": "改行", "section": "編集" }
     ]
+  },
+  "address-book": {
+    "title": "アドレス帳",
+    "shortcuts": [
+      { "key": "Ctrl + Shift + B", "description": "アドレス帳を開く", "section": "操作" },
+      { "key": "Ctrl + N", "description": "新規連絡先", "section": "操作" },
+      { "key": "↑ / ↓", "description": "移動", "section": "移動" },
+      { "key": "Enter", "description": "編集", "section": "操作" },
+      { "key": "F2", "description": "編集（表示）", "section": "操作" },
+      { "key": "Delete", "description": "削除", "section": "管理" },
+      { "key": "Ctrl + A", "description": "すべて選択", "section": "選択" },
+      { "key": "Ctrl + C", "description": "コピー", "section": "編集" },
+      { "key": "Ctrl + X", "description": "切り取り", "section": "編集" },
+      { "key": "Ctrl + V", "description": "貼付", "section": "編集" },
+      { "key": "Ctrl + F", "description": "検索", "section": "検索" },
+      { "key": "Ctrl + P", "description": "印刷", "section": "操作" },
+      { "key": "Ctrl + S", "description": "保存", "section": "操作" },
+      { "key": "Tab / Shift + Tab", "description": "次/前フィールド", "section": "移動" },
+      { "key": "Ctrl + Z", "description": "元に戻す", "section": "編集" },
+      { "key": "Ctrl + Y", "description": "やり直す", "section": "編集" }
+    ]
+  },
+  "calendar": {
+    "title": "カレンダー",
+    "shortcuts": [
+      { "key": "Ctrl + N", "description": "新規イベント", "section": "操作" },
+      { "key": "Ctrl + Shift + N", "description": "新規タスク", "section": "操作" },
+      { "key": "↑ / ↓ / ← / →", "description": "移動", "section": "移動" },
+      { "key": "Enter", "description": "イベント表示/編集", "section": "操作" },
+      { "key": "Space", "description": "詳細表示", "section": "表示" },
+      { "key": "Delete", "description": "削除", "section": "管理" },
+      { "key": "Ctrl + A", "description": "すべて選択", "section": "選択" },
+      { "key": "Ctrl + C", "description": "コピー", "section": "編集" },
+      { "key": "Ctrl + X", "description": "切り取り", "section": "編集" },
+      { "key": "Ctrl + V", "description": "貼付", "section": "編集" },
+      { "key": "Ctrl + S", "description": "保存", "section": "操作" },
+      { "key": "Ctrl + P", "description": "印刷", "section": "操作" },
+      { "key": "Ctrl + F", "description": "検索", "section": "検索" },
+      { "key": "Today", "description": "今日に移動", "section": "移動" },
+      { "key": "Ctrl + Z", "description": "元に戻す", "section": "編集" },
+      { "key": "Ctrl + Y", "description": "やり直す", "section": "編集" }
+    ]
+  },
+  "tasks": {
+    "title": "タスク",
+    "shortcuts": [
+      { "key": "Ctrl + N", "description": "新規タスク", "section": "操作" },
+      { "key": "↑ / ↓", "description": "移動", "section": "移動" },
+      { "key": "Enter", "description": "タスク編集", "section": "操作" },
+      { "key": "F2", "description": "編集（表示）", "section": "操作" },
+      { "key": "Delete", "description": "削除", "section": "管理" },
+      { "key": "Space", "description": "完了切替", "section": "管理" },
+      { "key": "Ctrl + A", "description": "すべて選択", "section": "選択" },
+      { "key": "Ctrl + C", "description": "コピー", "section": "編集" },
+      { "key": "Ctrl + X", "description": "切り取り", "section": "編集" },
+      { "key": "Ctrl + V", "description": "貼付", "section": "編集" },
+      { "key": "Ctrl + S", "description": "保存", "section": "操作" },
+      { "key": "Ctrl + P", "description": "印刷", "section": "操作" },
+      { "key": "Ctrl + F", "description": "検索", "section": "検索" },
+      { "key": "Tab / Shift + Tab", "description": "次/前フィールド", "section": "移動" },
+      { "key": "Ctrl + Z", "description": "元に戻す", "section": "編集" },
+      { "key": "Ctrl + Y", "description": "やり直す", "section": "編集" }
+    ]
   }
 }
