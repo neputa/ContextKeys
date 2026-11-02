@@ -68,7 +68,7 @@ function renderGroups(contextInfo, data) {
 
 function applyFilter() {
   const query = searchInput.value.trim().toLowerCase();
-  
+
   if (query === '') {
     // No search query: restore original HTML
     if (originalHtml) {
@@ -87,7 +87,7 @@ function applyFilter() {
   // Filter groups and items
   const groups = Array.from(document.querySelectorAll('.group'));
   let hasVisibleItems = false;
-  
+
   groups.forEach((group) => {
     const items = group.querySelectorAll('.shortcut-item');
     let visibleCount = 0;
