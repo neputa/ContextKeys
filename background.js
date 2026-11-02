@@ -13,9 +13,26 @@ async function detectContext() {
   const tabs = await browser.tabs.query({ active: true, currentWindow: true });
   const activeTab = tabs[0] || {};
   const url = activeTab.url || '';
+  const tabType = activeTab.type || '';
 
-  if (/message|thread|mail/.test(url)) {
+  // メール作成画面: 新しいウィンドウまたはタイプが特定できない場合
+  if (url.includes('compose.html') || (tabType === '' && url === '')) {
+    return 'message-compose';
+  }
+
+  // メッセージ表示画面: message:// URL または specific tab indicators
+  if (url.startsWith('message://') || /displayMessage|messagePane/.test(url)) {
+    return 'message-view';
+  }
+
+  // メール一覧: mailbox://, imap://, nntp:// など
+  if (/^(mailbox|imap|nntp|pop|news):\/\//i.test(url) || /message|thread|mail/.test(url)) {
     return 'mail-list';
+  }
+
+  // アドレス帳
+  if (url.includes('addressbook')) {
+    return 'address-book';
   }
 
   return 'common';
