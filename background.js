@@ -22,34 +22,47 @@ async function detectContext() {
 
     const activeTab = tabs[0] || {};
     const url = activeTab.url || '';
+    const title = activeTab.title || '';
 
-    console.log('ContextKeys: detected URL:', url);
+    console.log('ContextKeys: detectContext', {
+      url,
+      title,
+      windowType: currentWindow.type,
+      tabTitle: activeTab.title,
+      tabUrl: activeTab.url
+    });
 
     // カレンダー（最初にチェック）
-    if (url.includes('about:calendar')) {
+    if (url.includes('about:calendar') || title.toLowerCase().includes('calendar') || title.includes('カレンダー')) {
+      console.log('ContextKeys: detected calendar context');
       return 'calendar';
     }
 
     // タスク（次にチェック）
-    if (url.includes('about:tasks')) {
+    if (url.includes('about:tasks') || title.toLowerCase().includes('task') || title.includes('タスク') || title.includes('TODO')) {
+      console.log('ContextKeys: detected tasks context');
       return 'tasks';
     }
 
     // アドレス帳
-    if (url.includes('addressbook')) {
+    if (url.includes('addressbook') || title.toLowerCase().includes('addressbook') || title.includes('アドレス帳')) {
+      console.log('ContextKeys: detected address-book context');
       return 'address-book';
     }
 
     // メール一覧・表示: プロトコルベースの判定のみ
     if (/^(mailbox|imap|nntp|pop|news|message):\/\//i.test(url)) {
+      console.log('ContextKeys: detected mail context (protocol)');
       return 'mail';
     }
 
     // メール作成: popup ウィンドウ、compose URL、空 URL
     if (currentWindow.type === 'popup' || url.includes('compose') || url === '') {
+      console.log('ContextKeys: detected mail context (popup/compose/empty)');
       return 'mail';
     }
 
+    console.log('ContextKeys: detected common context');
     return 'common';
   } catch (error) {
     console.error('ContextKeys: detectContext error:', error);
