@@ -87,5 +87,11 @@ function applyFilter() {
   }
 }
 
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    window.close();
+  }
+});
+
 searchInput.addEventListener('input', applyFilter);
 loadData();

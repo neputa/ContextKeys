@@ -24,21 +24,13 @@ async function detectContext() {
 async function openShortcutDialog() {
   try {
     const context = await detectContext();
-
-    if (typeof browser.browserAction?.openPopup === 'function') {
-      browser.browserAction.openPopup();
-      return;
-    }
-
-    await readShortcutData();
     const url = browser.runtime.getURL(`shortcut-dialog.html?context=${encodeURIComponent(context)}`);
-
+    
     await browser.windows.create({
       type: 'popup',
       url,
-      width: 520,
-      height: 620,
-      focused: true,
+      width: 720,
+      height: 760,
     });
   } catch (error) {
     console.error('ContextKeys: failed to open dialog', error);

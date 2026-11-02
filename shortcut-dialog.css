@@ -1,14 +1,58 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f6f7fb;
+  --surface: #ffffff;
+  --surface-strong: #eef2ff;
+  --panel-border: #e5e7eb;
+  --text: #1f2937;
+  --muted: #4b5563;
+  --key-bg: #eff6ff;
+  --key-text: #1d4ed8;
+  --input-border: #cbd5e1;
+  --empty-bg: #ffffff;
+  --group-title-bg: #eef2ff;
+  --item-border: #f1f5f9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111827;
+    --surface: #1f2937;
+    --surface-strong: #111827;
+    --panel-border: #374151;
+    --text: #f3f4f6;
+    --muted: #cbd5e1;
+    --key-bg: #172554;
+    --key-text: #bfdbfe;
+    --input-border: #475569;
+    --empty-bg: #1f2937;
+    --group-title-bg: #1e293b;
+    --item-border: #334155;
+  }
+}
+
 body {
+  min-height: 100vh;
   margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: Arial, sans-serif;
-  background: #f6f7fb;
-  color: #1f2937;
+  background: var(--bg);
+  color: var(--text);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+  overflow: hidden;
 }
 
 .dialog {
-  max-width: 520px;
+  width: min(100%, 700px);
+  max-height: calc(100vh - 32px);
   margin: 0 auto;
   padding: 20px 20px 26px;
+  box-sizing: border-box;
+  overflow: auto;
 }
 
 .header {
@@ -22,7 +66,7 @@ h1 {
 
 .context-label {
   margin: 0;
-  color: #4b5563;
+  color: var(--muted);
   font-size: 0.95rem;
 }
 
@@ -37,9 +81,11 @@ h1 {
   box-sizing: border-box;
   font-size: 1rem;
   padding: 10px 12px;
-  border: 1px solid #cbd5e1;
+  border: 1px solid var(--input-border);
   border-radius: 8px;
   margin-bottom: 18px;
+  background: var(--surface);
+  color: var(--text);
 }
 
 .shortcut-list {
@@ -49,8 +95,8 @@ h1 {
 }
 
 .group {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
+  background: var(--surface);
+  border: 1px solid var(--panel-border);
   border-radius: 10px;
   overflow: hidden;
 }
@@ -58,9 +104,9 @@ h1 {
 .group h2 {
   margin: 0;
   padding: 12px 14px;
-  background: #eef2ff;
+  background: var(--group-title-bg);
   font-size: 1rem;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--panel-border);
 }
 
 .shortcut-items {
@@ -74,7 +120,7 @@ h1 {
   grid-template-columns: 150px 1fr;
   gap: 10px;
   padding: 12px 14px;
-  border-bottom: 1px solid #f1f5f9;
+  border-bottom: 1px solid var(--item-border);
 }
 
 .shortcut-item:last-child {
@@ -83,8 +129,8 @@ h1 {
 
 .key {
   font-weight: 700;
-  color: #1d4ed8;
-  background: #eff6ff;
+  color: var(--key-text);
+  background: var(--key-bg);
   border-radius: 6px;
   padding: 4px 8px;
   text-align: center;
@@ -97,8 +143,8 @@ h1 {
 
 .empty-state {
   padding: 20px;
-  background: #fff;
-  border: 1px solid #e5e7eb;
+  background: var(--empty-bg);
+  border: 1px solid var(--panel-border);
   border-radius: 10px;
-  color: #4b5563;
+  color: var(--muted);
 }
