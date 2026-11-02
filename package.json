@@ -1,0 +1,26 @@
+{
+  "name": "contextkeys",
+  "version": "1.0.0",
+  "description": "Thunderbird keyboard shortcuts display addon",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "lint": "node scripts/lint.js",
+    "test": "npm run lint"
+  },
+  "author": "ContextKeys Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/ContextKeys.git"
+  },
+  "keywords": [
+    "thunderbird",
+    "addon",
+    "webextension",
+    "keyboard-shortcuts",
+    "productivity"
+  ],
+  "engines": {
+    "thunderbird": ">=128.0"
+  }
+}
