@@ -25,7 +25,7 @@ async function openShortcutDialog() {
   try {
     const context = await detectContext();
     const url = browser.runtime.getURL(`shortcut-dialog.html?context=${encodeURIComponent(context)}`);
-    
+
     await browser.windows.create({
       type: 'popup',
       url,
