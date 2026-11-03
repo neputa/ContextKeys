@@ -1,6 +1,5 @@
 const params = new URLSearchParams(window.location.search);
 const selectedContext = params.get('context') || 'common';
-const contextLabel = document.querySelector('#context-label');
 const searchInput = document.querySelector('#shortcut-search');
 const shortcutList = document.querySelector('#shortcut-list');
 let originalHtml = ''; // Store original HTML to restore after search
@@ -30,9 +29,6 @@ async function loadData() {
   const data = await response.json();
   const contextInfo = data[selectedContext] || data.common;
 
-  const contextTitle = getText(contextInfo.titles, contextInfo.title || '');
-  const emptyMessage = currentLanguage === 'ja' ? '現在のコンテキスト: ' : 'Current context: ';
-  contextLabel.textContent = `${emptyMessage}${contextTitle}`;
   renderGroups(contextInfo, data);
 }
 
