@@ -2,7 +2,7 @@
 
 /**
  * ContextKeys Lint Script
- * 
+ *
  * Validates JSON and JavaScript syntax
  * Usage: node scripts/lint.js
  */
@@ -20,12 +20,12 @@ console.log('🔍 Linting ContextKeys...\n');
 try {
   console.log('📋 Checking manifest.json...');
   const manifest = JSON.parse(fs.readFileSync('manifest.json', 'utf8'));
-  
+
   // Validate required fields
   if (!manifest.name) errors.push('manifest.json: Missing "name" field');
   if (!manifest.version) errors.push('manifest.json: Missing "version" field');
   if (!manifest.permissions) errors.push('manifest.json: Missing "permissions" field');
-  
+
   console.log('   ✅ manifest.json syntax OK');
 } catch (error) {
   errors.push(`manifest.json: ${error.message}`);
@@ -35,13 +35,13 @@ try {
 try {
   console.log('📋 Checking data/shortcuts.json...');
   const shortcuts = JSON.parse(fs.readFileSync('data/shortcuts.json', 'utf8'));
-  
+
   // Validate structure
   const contexts = Object.keys(shortcuts);
   if (contexts.length === 0) {
     errors.push('data/shortcuts.json: No contexts defined');
   }
-  
+
   let totalShortcuts = 0;
   for (const context of contexts) {
     const ctx = shortcuts[context];
@@ -51,7 +51,7 @@ try {
       totalShortcuts += ctx.shortcuts.length;
     }
   }
-  
+
   console.log(`   ✅ data/shortcuts.json syntax OK (${totalShortcuts} shortcuts)`);
 } catch (error) {
   errors.push(`data/shortcuts.json: ${error.message}`);

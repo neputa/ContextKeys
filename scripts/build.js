@@ -2,10 +2,10 @@
 
 /**
  * ContextKeys XPI Build Script
- * 
+ *
  * Generates a .xpi (zip) file for distribution
  * Usage: node scripts/build.js [output-dir]
- * 
+ *
  * Output: contextkeys-1.0.0.xpi (in dist/ or specified directory)
  */
 
@@ -49,7 +49,7 @@ const EXCLUDE_PATTERNS = [
 async function build() {
   try {
     console.log(`🔨 Building ContextKeys v${VERSION}...`);
-    
+
     // Create output directory
     if (!fs.existsSync(OUTPUT_DIR)) {
       fs.mkdirSync(OUTPUT_DIR, { recursive: true });
@@ -69,7 +69,7 @@ async function build() {
 
     // Generate XPI using zip command
     const zipCommand = `cd /home/takuma/repos/ContextKeys && zip -r -q "${path.resolve(OUTPUT_FILE)}" ${INCLUDE_PATTERNS.join(' ')} -x ${EXCLUDE_PATTERNS.map(p => `"${p}"/*`).join(' ')}`;
-    
+
     console.log(`📦 Packaging files...`);
     execSync(zipCommand, { stdio: 'inherit' });
 
