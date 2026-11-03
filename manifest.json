@@ -3,6 +3,10 @@
   "name": "ContextKeys",
   "description": "Thunderbird の現在のメッセージ一覧コンテキストで使えるショートカットを表示します。",
   "version": "1.0.0",
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
   "browser_specific_settings": {
     "gecko": {
       "id": "contextkeys@local.dev",
