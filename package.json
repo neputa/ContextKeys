@@ -1,6 +1,6 @@
 {
   "name": "contextkeys",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Thunderbird keyboard shortcuts display addon",
   "scripts": {
     "build": "node scripts/build.js",
