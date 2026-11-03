@@ -59,7 +59,7 @@ function renderGroups(contextInfo, data) {
 
   const html = currentGroups.map((group) => {
     const groupTitle = getText(group.titles, 'Shortcuts');
-    
+
     const items = group.items.map((item) => {
       const description = getText(item.descriptions, item.description || '');
       const section = getText(item.sections, item.section || '');
@@ -145,7 +145,7 @@ function initializeUIText() {
   const dialogTitle = document.querySelector('#dialog-title');
   const searchLabel = document.querySelector('.search-label');
   const searchInput = document.querySelector('#shortcut-search');
-  
+
   if (currentLanguage === 'ja') {
     dialogTitle.textContent = 'Thunderbird ショートカット';
     searchLabel.textContent = 'ショートカットを検索';

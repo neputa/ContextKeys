@@ -15,12 +15,12 @@ TRANSLATIONS = {
     "アドレス帳": {"en": "Address Book", "ja": "アドレス帳"},
     "カレンダー": {"en": "Calendar", "ja": "カレンダー"},
     "タスク": {"en": "Tasks", "ja": "タスク"},
-    
+
     # Sections - Common
     "共通": {"en": "Common", "ja": "共通"},
     "検索": {"en": "Search", "ja": "検索"},
     "タブ": {"en": "Tabs", "ja": "タブ"},
-    
+
     # Sections - Mail
     "作成": {"en": "Compose", "ja": "作成"},
     "移動": {"en": "Navigation", "ja": "移動"},
@@ -33,7 +33,7 @@ TRANSLATIONS = {
     "選択": {"en": "Selection", "ja": "選択"},
     "編集": {"en": "Edit", "ja": "編集"},
     "書式": {"en": "Format", "ja": "書式"},
-    
+
     # Descriptions - Common
     "新規作成": {"en": "New message", "ja": "新規作成"},
     "全文検索": {"en": "Full-text search", "ja": "全文検索"},
@@ -53,7 +53,7 @@ TRANSLATIONS = {
     "最後のタブ": {"en": "Last tab", "ja": "最後のタブ"},
     "閉じる": {"en": "Close", "ja": "閉じる"},
     "受信": {"en": "Get mail", "ja": "受信"},
-    
+
     # Descriptions - Mail
     "新規メッセージ": {"en": "New message", "ja": "新規メッセージ"},
     "移動": {"en": "Move", "ja": "移動"},
@@ -118,7 +118,7 @@ TRANSLATIONS = {
     "リンク": {"en": "Link", "ja": "リンク"},
     "スタイル中止": {"en": "Clear style", "ja": "スタイル中止"},
     "改行": {"en": "Line break", "ja": "改行"},
-    
+
     # Descriptions - Address Book
     "アドレス帳を開く": {"en": "Open address book", "ja": "アドレス帳を開く"},
     "新規連絡先": {"en": "New contact", "ja": "新規連絡先"},
@@ -127,7 +127,7 @@ TRANSLATIONS = {
     "すべて選択": {"en": "Select all", "ja": "すべて選択"},
     "クイック検索": {"en": "Quick search", "ja": "クイック検索"},
     "次/前フィールド": {"en": "Next/Previous field", "ja": "次/前フィールド"},
-    
+
     # Descriptions - Calendar
     "新規イベント": {"en": "New event", "ja": "新規イベント"},
     "新規タスク": {"en": "New task", "ja": "新規タスク"},
@@ -149,22 +149,22 @@ TRANSLATIONS = {
 
 def convert_shortcuts_to_multilingual(input_file):
     """Convert single-language shortcuts.json to multilingual format."""
-    
+
     with open(input_file, 'r', encoding='utf-8') as f:
         data = json.load(f)
-    
+
     new_data = {}
-    
+
     for context, context_data in data.items():
         new_context = {}
-        
+
         # Convert title
         old_title = context_data.get('title', '')
         new_context['titles'] = {
             'ja': old_title,
             'en': TRANSLATIONS.get(old_title, {}).get('en', old_title)
         }
-        
+
         # Convert shortcuts
         new_shortcuts = []
         for shortcut in context_data.get('shortcuts', []):
@@ -180,22 +180,22 @@ def convert_shortcuts_to_multilingual(input_file):
                 }
             }
             new_shortcuts.append(new_shortcut)
-        
+
         new_context['shortcuts'] = new_shortcuts
         new_data[context] = new_context
-    
+
     return new_data
 
 if __name__ == '__main__':
     input_file = sys.argv[1] if len(sys.argv) > 1 else 'data/shortcuts.json'
     output_file = sys.argv[2] if len(sys.argv) > 2 else 'data/shortcuts.json'
-    
+
     print(f"Converting {input_file}...")
     new_data = convert_shortcuts_to_multilingual(input_file)
-    
+
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(new_data, f, ensure_ascii=False, indent=2)
-    
+
     print(f"✅ Conversion complete! Saved to {output_file}")
     print(f"   Contexts: {len(new_data)}")
     total_shortcuts = sum(len(ctx.get('shortcuts', [])) for ctx in new_data.values())
