@@ -1,73 +1,75 @@
-# ContextKeys - Thunderbird キーボードショートカット表示アドオン
+# ContextKeys - Thunderbird Keyboard Shortcuts Display Addon
 
-Thunderbird のキーボードショートカットを、現在操作している画面の種類に応じて確認できるアドオンです。
+Display Thunderbird keyboard shortcuts in a context-aware popup. This addon shows the most relevant shortcuts based on your current screen (Mail, Calendar, Address Book, or Tasks).
 
-## ✨ 機能
+## ✨ Features
 
-- **コンテキスト対応ショートカット表示**: メール、カレンダー、アドレス帳、タスクなど、現在の操作コンテキストに応じたショートカット一覧を表示
-- **リアルタイム検索**: ショートカットキーや説明文で素早く検索可能
-- **ダークモード対応**: OS のダークモード設定に自動対応
-- **156 個のショートカット実装**: 共通、メール、カレンダー、アドレス帳、タスク各種コンテキストをカバー
+- **Context-aware shortcuts**: Automatically detects whether you're in Mail, Calendar, Address Book, or Tasks and shows relevant shortcuts
+- **Real-time search**: Quickly search shortcuts by key or description
+- **Dark mode support**: Automatically adapts to your OS dark mode setting
+- **156 shortcuts**: Comprehensive coverage of Common, Mail, Calendar, Address Book, and Tasks contexts
+- **Multilingual**: Supports Japanese and English with automatic language detection
 
-## 🚀 インストール方法
+## 🚀 Installation
 
-### 前提条件
+### Requirements
 
-- Thunderbird 128.0 以上
+- Thunderbird 128.0 or later
 
-### インストール手順
+### Installation Steps
 
-1. 本リポジトリの [Releases](../../releases) ページから XPI ファイルをダウンロード
-2. Thunderbird を開く
-3. メニューから「ツール」→「アドオン」を選択
-4. アドオンマネージャーの右上の歯車アイコンから「ファイルからアドオンをインストール」を選択
-5. ダウンロードした XPI ファイルを選択して完了
+1. Download the XPI file from the [Releases](../../releases) page
+2. Open Thunderbird
+3. Go to "Tools" → "Add-ons"
+4. Click the gear icon in the top right → "Install Add-on from File"
+5. Select the downloaded XPI file
 
-## 💡 使い方
+## 💡 Usage
 
-### 基本的な操作
+### Basic Usage
 
-1. Thunderbird で任意のタブを開く（メール、カレンダー、アドレス帳など）
-2. **`Ctrl + Shift + H`** を押す
-3. そのコンテキストで利用可能なショートカット一覧が表示される
-4. 検索ボックスで目的のショートカットを検索可能
-5. **`Esc`** キーを押すか、ウィンドウを閉じると一覧が閉じる
+1. Open any tab in Thunderbird (Mail, Calendar, Address Book, etc.)
+2. Press **`Ctrl + Shift + H`**
+3. A popup will display the available shortcuts for your current context
+4. Use the search box to find specific shortcuts
+5. Press **`Esc`** or close the window to dismiss the popup
 
-### サポート対象コンテキスト
+### Supported Contexts
 
-| コンテキスト | 説明 |
-|-----------|------|
-| **メール** | メール一覧、メッセージ表示、メール作成時のショートカット |
-| **カレンダー** | イベント・スケジュール操作 |
-| **アドレス帳** | 連絡先管理のショートカット |
-| **タスク（ToDo）** | タスク・やることリスト操作 |
-| **共通** | 検索、タブ移動など全画面共通機能 |
+| Context | Description |
+|---------|-------------|
+| **Mail** | Shortcuts for mail list, message viewing, and compose windows |
+| **Calendar** | Event and schedule management shortcuts |
+| **Address Book** | Contact management shortcuts |
+| **Tasks** | Task and to-do list shortcuts |
+| **Common** | Shortcuts available across all contexts |
 
-## 📋 実装内容
+## 📊 Implementation Details
 
-- **共通**: 18 個のショートカット
-- **メール**: 70 個のショートカット
-- **カレンダー**: 28 個のショートカット
-- **アドレス帳**: 19 個のショートカット
-- **タスク**: 21 個のショートカット
+- **Common**: 18 shortcuts
+- **Mail**: 70 shortcuts
+- **Calendar**: 28 shortcuts
+- **Address Book**: 19 shortcuts
+- **Tasks**: 21 shortcuts
+- **Total**: 156 keyboard shortcuts
 
-## 🌍 多言語対応
+## 🌍 Multilingual Support
 
-- **対応言語**: 日本語（ja）、英語（en）
-- **自動言語検出**: OS・ブラウザの言語設定に基づいて自動切り替え
-  - 日本語環境 → 日本語表示
-  - その他の言語環境 → 英語表示（フォールバック）
-- **ショートカット説明**: すべての 156 個のショートカットが日本語・英語の両言語で対応
-- **UI テキスト**: ダイアログタイトル、検索ボックス、その他 UI 要素も言語対応
+- **Supported languages**: Japanese (ja) and English (en)
+- **Automatic language detection**: Displays in your system language
+  - Japanese environment → Japanese display
+  - Other environments → English display (fallback)
+- **All 156 shortcuts**: Available in both Japanese and English
+- **UI elements**: Dialog title, search box, and messages are fully translated
 
-## 📝 ライセンス
+## 📄 License
 
 MIT License
 
-## 📧 サポート
+## 🤝 Support
 
-問題が発生した場合や機能提案については、本リポジトリの Issues でご報告ください。
+If you encounter any issues or have feature suggestions, please report them in the [Issues](../../issues) section of this repository.
 
 ---
 
-**バージョン**: 1.0.0
+**Version**: 1.0.0
