@@ -1,179 +1,1714 @@
 {
   "common": {
-    "title": "共通",
+    "titles": {
+      "ja": "共通",
+      "en": "Common"
+    },
     "shortcuts": [
-      { "key": "Ctrl + N", "description": "新規作成", "section": "共通" },
-      { "key": "Ctrl + K", "description": "全文検索", "section": "共通" },
-      { "key": "Ctrl + F", "description": "検索", "section": "共通" },
-      { "key": "Ctrl + Shift + F", "description": "詳細検索", "section": "共通" },
-      { "key": "Ctrl + G", "description": "次を検索", "section": "検索" },
-      { "key": "Shift + F3", "description": "前を検索", "section": "検索" },
-      { "key": "F3", "description": "検索繰り返し", "section": "検索" },
-      { "key": "F6", "description": "次の領域", "section": "共通" },
-      { "key": "Shift + F6", "description": "前の領域", "section": "共通" },
-      { "key": "Ctrl + Tab", "description": "次のタブ", "section": "共通" },
-      { "key": "Ctrl + Shift + Tab", "description": "前のタブ", "section": "共通" },
-      { "key": "Ctrl + 1", "description": "メールタブ", "section": "タブ" },
-      { "key": "Ctrl + 2", "description": "タブ2", "section": "タブ" },
-      { "key": "Ctrl + 3", "description": "カレンダータブ", "section": "タブ" },
-      { "key": "Ctrl + 4", "description": "ToDoタブ", "section": "タブ" },
-      { "key": "Ctrl + 9", "description": "最後のタブ", "section": "タブ" },
-      { "key": "Ctrl + W", "description": "閉じる", "section": "共通" },
-      { "key": "F5", "description": "受信", "section": "共通" }
+      {
+        "key": "Ctrl + N",
+        "descriptions": {
+          "ja": "新規作成",
+          "en": "New message"
+        },
+        "sections": {
+          "ja": "共通",
+          "en": "Common"
+        }
+      },
+      {
+        "key": "Ctrl + K",
+        "descriptions": {
+          "ja": "全文検索",
+          "en": "Full-text search"
+        },
+        "sections": {
+          "ja": "共通",
+          "en": "Common"
+        }
+      },
+      {
+        "key": "Ctrl + F",
+        "descriptions": {
+          "ja": "検索",
+          "en": "Search"
+        },
+        "sections": {
+          "ja": "共通",
+          "en": "Common"
+        }
+      },
+      {
+        "key": "Ctrl + Shift + F",
+        "descriptions": {
+          "ja": "詳細検索",
+          "en": "Advanced search"
+        },
+        "sections": {
+          "ja": "共通",
+          "en": "Common"
+        }
+      },
+      {
+        "key": "Ctrl + G",
+        "descriptions": {
+          "ja": "次を検索",
+          "en": "Find next"
+        },
+        "sections": {
+          "ja": "検索",
+          "en": "Search"
+        }
+      },
+      {
+        "key": "Shift + F3",
+        "descriptions": {
+          "ja": "前を検索",
+          "en": "Find previous"
+        },
+        "sections": {
+          "ja": "検索",
+          "en": "Search"
+        }
+      },
+      {
+        "key": "F3",
+        "descriptions": {
+          "ja": "検索繰り返し",
+          "en": "Find again"
+        },
+        "sections": {
+          "ja": "検索",
+          "en": "Search"
+        }
+      },
+      {
+        "key": "F6",
+        "descriptions": {
+          "ja": "次の領域",
+          "en": "Next pane"
+        },
+        "sections": {
+          "ja": "共通",
+          "en": "Common"
+        }
+      },
+      {
+        "key": "Shift + F6",
+        "descriptions": {
+          "ja": "前の領域",
+          "en": "Previous pane"
+        },
+        "sections": {
+          "ja": "共通",
+          "en": "Common"
+        }
+      },
+      {
+        "key": "Ctrl + Tab",
+        "descriptions": {
+          "ja": "次のタブ",
+          "en": "Next tab"
+        },
+        "sections": {
+          "ja": "共通",
+          "en": "Common"
+        }
+      },
+      {
+        "key": "Ctrl + Shift + Tab",
+        "descriptions": {
+          "ja": "前のタブ",
+          "en": "Previous tab"
+        },
+        "sections": {
+          "ja": "共通",
+          "en": "Common"
+        }
+      },
+      {
+        "key": "Ctrl + 1",
+        "descriptions": {
+          "ja": "メールタブ",
+          "en": "Mail tab"
+        },
+        "sections": {
+          "ja": "タブ",
+          "en": "Tabs"
+        }
+      },
+      {
+        "key": "Ctrl + 2",
+        "descriptions": {
+          "ja": "タブ2",
+          "en": "Tab 2"
+        },
+        "sections": {
+          "ja": "タブ",
+          "en": "Tabs"
+        }
+      },
+      {
+        "key": "Ctrl + 3",
+        "descriptions": {
+          "ja": "カレンダータブ",
+          "en": "Calendar tab"
+        },
+        "sections": {
+          "ja": "タブ",
+          "en": "Tabs"
+        }
+      },
+      {
+        "key": "Ctrl + 4",
+        "descriptions": {
+          "ja": "ToDoタブ",
+          "en": "Task tab"
+        },
+        "sections": {
+          "ja": "タブ",
+          "en": "Tabs"
+        }
+      },
+      {
+        "key": "Ctrl + 9",
+        "descriptions": {
+          "ja": "最後のタブ",
+          "en": "Last tab"
+        },
+        "sections": {
+          "ja": "タブ",
+          "en": "Tabs"
+        }
+      },
+      {
+        "key": "Ctrl + W",
+        "descriptions": {
+          "ja": "閉じる",
+          "en": "Close"
+        },
+        "sections": {
+          "ja": "共通",
+          "en": "Common"
+        }
+      },
+      {
+        "key": "F5",
+        "descriptions": {
+          "ja": "受信",
+          "en": "Get mail"
+        },
+        "sections": {
+          "ja": "共通",
+          "en": "Common"
+        }
+      }
     ]
   },
   "mail": {
-    "title": "メール",
+    "titles": {
+      "ja": "メール",
+      "en": "Mail"
+    },
     "shortcuts": [
-      { "key": "Ctrl + M", "description": "新規メッセージ", "section": "作成" },
-      { "key": "↑ / ↓", "description": "移動", "section": "移動" },
-      { "key": "F", "description": "次のメッセージ", "section": "移動" },
-      { "key": "B", "description": "前のメッセージ", "section": "移動" },
-      { "key": "N", "description": "次の未読", "section": "移動" },
-      { "key": "P", "description": "前の未読", "section": "移動" },
-      { "key": "T", "description": "次のスレッド", "section": "移動" },
-      { "key": "Home", "description": "先頭へ", "section": "移動" },
-      { "key": "End", "description": "末尾へ", "section": "移動" },
-      { "key": "Space", "description": "スクロール", "section": "移動" },
-      { "key": "→", "description": "スレッド展開", "section": "表示" },
-      { "key": "←", "description": "スレッド折りたたみ", "section": "表示" },
-      { "key": "*", "description": "すべて展開", "section": "表示" },
-      { "key": "\\", "description": "すべて折りたたみ", "section": "表示" },
-      { "key": "Ctrl + O", "description": "メッセージを開く", "section": "操作" },
-      { "key": "Ctrl + Shift + O", "description": "スレッドを開く", "section": "操作" },
-      { "key": "Enter", "description": "メッセージ開く", "section": "操作" },
-      { "key": "Delete", "description": "削除", "section": "管理" },
-      { "key": "Shift + Delete", "description": "完全削除", "section": "管理" },
-      { "key": "Ctrl + Shift + M", "description": "フォルダ移動", "section": "管理" },
-      { "key": "Ctrl + S", "description": "保存", "section": "操作" },
-      { "key": "Ctrl + P", "description": "印刷", "section": "操作" },
-      { "key": "Ctrl + U", "description": "ソース表示", "section": "操作" },
-      { "key": "R", "description": "返信", "section": "返信" },
-      { "key": "A", "description": "全員返信", "section": "返信" },
-      { "key": "F", "description": "転送", "section": "返信" },
-      { "key": "Ctrl + R", "description": "返信（表示）", "section": "返信" },
-      { "key": "Ctrl + Shift + R", "description": "全員返信（表示）", "section": "返信" },
-      { "key": "Ctrl + L", "description": "転送（表示）", "section": "返信" },
-      { "key": "Ctrl + E", "description": "編集", "section": "返信" },
-      { "key": "Ctrl + Enter", "description": "送信", "section": "作成" },
-      { "key": "Ctrl + Shift + Enter", "description": "後で送信", "section": "作成" },
-      { "key": "Ctrl + Shift + A", "description": "添付", "section": "作成" },
-      { "key": "Ctrl + H", "description": "検索置換", "section": "編集" },
-      { "key": "Ctrl + Shift + P", "description": "スペルチェック", "section": "編集" },
-      { "key": "M", "description": "既読切替", "section": "マーク" },
-      { "key": "R", "description": "スレッド既読", "section": "マーク" },
-      { "key": "Shift + C", "description": "すべて既読", "section": "マーク" },
-      { "key": "S", "description": "スター", "section": "マーク" },
-      { "key": "1 ～ 9", "description": "タグ付け", "section": "マーク" },
-      { "key": "0", "description": "タグ削除", "section": "マーク" },
-      { "key": "J", "description": "迷惑メール", "section": "マーク" },
-      { "key": "Shift + J", "description": "迷惑解除", "section": "マーク" },
-      { "key": "K", "description": "スレッド無視", "section": "ニュース" },
-      { "key": "Shift + K", "description": "サブスレッド無視", "section": "ニュース" },
-      { "key": "W", "description": "注目対象", "section": "ニュース" },
-      { "key": "Ctrl + Shift + K", "description": "フィルター", "section": "検索" },
-      { "key": "Ctrl + G", "description": "次を検索", "section": "検索" },
-      { "key": "Shift + F3", "description": "前を検索", "section": "検索" },
-      { "key": "F3", "description": "検索繰り返し", "section": "検索" },
-      { "key": "Ctrl + A", "description": "選択", "section": "選択" },
-      { "key": "Ctrl + Shift + A", "description": "スレッド選択", "section": "選択" },
-      { "key": "Ctrl + C", "description": "コピー", "section": "編集" },
-      { "key": "Ctrl + X", "description": "切り取り", "section": "編集" },
-      { "key": "Ctrl + V", "description": "貼付", "section": "編集" },
-      { "key": "Ctrl + Z", "description": "元に戻す", "section": "編集" },
-      { "key": "Ctrl + Y", "description": "やり直す", "section": "編集" },
-      { "key": "Ctrl + T", "description": "等幅フォント", "section": "書式" },
-      { "key": "Ctrl + B", "description": "太字", "section": "書式" },
-      { "key": "Ctrl + I", "description": "斜体", "section": "書式" },
-      { "key": "Ctrl + U", "description": "下線", "section": "書式" },
-      { "key": "Ctrl + ]", "description": "インデント+", "section": "書式" },
-      { "key": "Ctrl + [", "description": "インデント-", "section": "書式" },
-      { "key": "Ctrl + K", "description": "リンク", "section": "書式" },
-      { "key": "Ctrl + Shift + Y", "description": "スタイル中止", "section": "書式" },
-      { "key": "Shift + Enter", "description": "改行", "section": "編集" }
+      {
+        "key": "Ctrl + M",
+        "descriptions": {
+          "ja": "新規メッセージ",
+          "en": "New message"
+        },
+        "sections": {
+          "ja": "作成",
+          "en": "Compose"
+        }
+      },
+      {
+        "key": "↑ / ↓",
+        "descriptions": {
+          "ja": "移動",
+          "en": "Move"
+        },
+        "sections": {
+          "ja": "移動",
+          "en": "Move"
+        }
+      },
+      {
+        "key": "F",
+        "descriptions": {
+          "ja": "次のメッセージ",
+          "en": "Next message"
+        },
+        "sections": {
+          "ja": "移動",
+          "en": "Move"
+        }
+      },
+      {
+        "key": "B",
+        "descriptions": {
+          "ja": "前のメッセージ",
+          "en": "Previous message"
+        },
+        "sections": {
+          "ja": "移動",
+          "en": "Move"
+        }
+      },
+      {
+        "key": "N",
+        "descriptions": {
+          "ja": "次の未読",
+          "en": "Next unread"
+        },
+        "sections": {
+          "ja": "移動",
+          "en": "Move"
+        }
+      },
+      {
+        "key": "P",
+        "descriptions": {
+          "ja": "前の未読",
+          "en": "Previous unread"
+        },
+        "sections": {
+          "ja": "移動",
+          "en": "Move"
+        }
+      },
+      {
+        "key": "T",
+        "descriptions": {
+          "ja": "次のスレッド",
+          "en": "Next thread"
+        },
+        "sections": {
+          "ja": "移動",
+          "en": "Move"
+        }
+      },
+      {
+        "key": "Home",
+        "descriptions": {
+          "ja": "先頭へ",
+          "en": "Home"
+        },
+        "sections": {
+          "ja": "移動",
+          "en": "Move"
+        }
+      },
+      {
+        "key": "End",
+        "descriptions": {
+          "ja": "末尾へ",
+          "en": "End"
+        },
+        "sections": {
+          "ja": "移動",
+          "en": "Move"
+        }
+      },
+      {
+        "key": "Space",
+        "descriptions": {
+          "ja": "スクロール",
+          "en": "Scroll"
+        },
+        "sections": {
+          "ja": "移動",
+          "en": "Move"
+        }
+      },
+      {
+        "key": "→",
+        "descriptions": {
+          "ja": "スレッド展開",
+          "en": "Expand thread"
+        },
+        "sections": {
+          "ja": "表示",
+          "en": "View"
+        }
+      },
+      {
+        "key": "←",
+        "descriptions": {
+          "ja": "スレッド折りたたみ",
+          "en": "Collapse thread"
+        },
+        "sections": {
+          "ja": "表示",
+          "en": "View"
+        }
+      },
+      {
+        "key": "*",
+        "descriptions": {
+          "ja": "すべて展開",
+          "en": "Expand all"
+        },
+        "sections": {
+          "ja": "表示",
+          "en": "View"
+        }
+      },
+      {
+        "key": "\\",
+        "descriptions": {
+          "ja": "すべて折りたたみ",
+          "en": "Collapse all"
+        },
+        "sections": {
+          "ja": "表示",
+          "en": "View"
+        }
+      },
+      {
+        "key": "Ctrl + O",
+        "descriptions": {
+          "ja": "メッセージを開く",
+          "en": "Open message"
+        },
+        "sections": {
+          "ja": "操作",
+          "en": "Operations"
+        }
+      },
+      {
+        "key": "Ctrl + Shift + O",
+        "descriptions": {
+          "ja": "スレッドを開く",
+          "en": "Open thread"
+        },
+        "sections": {
+          "ja": "操作",
+          "en": "Operations"
+        }
+      },
+      {
+        "key": "Enter",
+        "descriptions": {
+          "ja": "メッセージ開く",
+          "en": "Open"
+        },
+        "sections": {
+          "ja": "操作",
+          "en": "Operations"
+        }
+      },
+      {
+        "key": "Delete",
+        "descriptions": {
+          "ja": "削除",
+          "en": "Delete"
+        },
+        "sections": {
+          "ja": "管理",
+          "en": "Management"
+        }
+      },
+      {
+        "key": "Shift + Delete",
+        "descriptions": {
+          "ja": "完全削除",
+          "en": "Permanently delete"
+        },
+        "sections": {
+          "ja": "管理",
+          "en": "Management"
+        }
+      },
+      {
+        "key": "Ctrl + Shift + M",
+        "descriptions": {
+          "ja": "フォルダ移動",
+          "en": "Move to folder"
+        },
+        "sections": {
+          "ja": "管理",
+          "en": "Management"
+        }
+      },
+      {
+        "key": "Ctrl + S",
+        "descriptions": {
+          "ja": "保存",
+          "en": "Save"
+        },
+        "sections": {
+          "ja": "操作",
+          "en": "Operations"
+        }
+      },
+      {
+        "key": "Ctrl + P",
+        "descriptions": {
+          "ja": "印刷",
+          "en": "Print"
+        },
+        "sections": {
+          "ja": "操作",
+          "en": "Operations"
+        }
+      },
+      {
+        "key": "Ctrl + U",
+        "descriptions": {
+          "ja": "ソース表示",
+          "en": "View source"
+        },
+        "sections": {
+          "ja": "操作",
+          "en": "Operations"
+        }
+      },
+      {
+        "key": "R",
+        "descriptions": {
+          "ja": "返信",
+          "en": "Reply"
+        },
+        "sections": {
+          "ja": "返信",
+          "en": "Reply"
+        }
+      },
+      {
+        "key": "A",
+        "descriptions": {
+          "ja": "全員返信",
+          "en": "Reply to all"
+        },
+        "sections": {
+          "ja": "返信",
+          "en": "Reply"
+        }
+      },
+      {
+        "key": "F",
+        "descriptions": {
+          "ja": "転送",
+          "en": "Forward"
+        },
+        "sections": {
+          "ja": "返信",
+          "en": "Reply"
+        }
+      },
+      {
+        "key": "Ctrl + R",
+        "descriptions": {
+          "ja": "返信（表示）",
+          "en": "Reply (view)"
+        },
+        "sections": {
+          "ja": "返信",
+          "en": "Reply"
+        }
+      },
+      {
+        "key": "Ctrl + Shift + R",
+        "descriptions": {
+          "ja": "全員返信（表示）",
+          "en": "Reply to all (view)"
+        },
+        "sections": {
+          "ja": "返信",
+          "en": "Reply"
+        }
+      },
+      {
+        "key": "Ctrl + L",
+        "descriptions": {
+          "ja": "転送（表示）",
+          "en": "Forward (view)"
+        },
+        "sections": {
+          "ja": "返信",
+          "en": "Reply"
+        }
+      },
+      {
+        "key": "Ctrl + E",
+        "descriptions": {
+          "ja": "編集",
+          "en": "Edit"
+        },
+        "sections": {
+          "ja": "返信",
+          "en": "Reply"
+        }
+      },
+      {
+        "key": "Ctrl + Enter",
+        "descriptions": {
+          "ja": "送信",
+          "en": "Send"
+        },
+        "sections": {
+          "ja": "作成",
+          "en": "Compose"
+        }
+      },
+      {
+        "key": "Ctrl + Shift + Enter",
+        "descriptions": {
+          "ja": "後で送信",
+          "en": "Send later"
+        },
+        "sections": {
+          "ja": "作成",
+          "en": "Compose"
+        }
+      },
+      {
+        "key": "Ctrl + Shift + A",
+        "descriptions": {
+          "ja": "添付",
+          "en": "Attach"
+        },
+        "sections": {
+          "ja": "作成",
+          "en": "Compose"
+        }
+      },
+      {
+        "key": "Ctrl + H",
+        "descriptions": {
+          "ja": "検索置換",
+          "en": "Find and replace"
+        },
+        "sections": {
+          "ja": "編集",
+          "en": "Edit"
+        }
+      },
+      {
+        "key": "Ctrl + Shift + P",
+        "descriptions": {
+          "ja": "スペルチェック",
+          "en": "Spell check"
+        },
+        "sections": {
+          "ja": "編集",
+          "en": "Edit"
+        }
+      },
+      {
+        "key": "M",
+        "descriptions": {
+          "ja": "既読切替",
+          "en": "Toggle read"
+        },
+        "sections": {
+          "ja": "マーク",
+          "en": "Marking"
+        }
+      },
+      {
+        "key": "R",
+        "descriptions": {
+          "ja": "スレッド既読",
+          "en": "Mark thread read"
+        },
+        "sections": {
+          "ja": "マーク",
+          "en": "Marking"
+        }
+      },
+      {
+        "key": "Shift + C",
+        "descriptions": {
+          "ja": "すべて既読",
+          "en": "Mark all read"
+        },
+        "sections": {
+          "ja": "マーク",
+          "en": "Marking"
+        }
+      },
+      {
+        "key": "S",
+        "descriptions": {
+          "ja": "スター",
+          "en": "Star"
+        },
+        "sections": {
+          "ja": "マーク",
+          "en": "Marking"
+        }
+      },
+      {
+        "key": "1 ～ 9",
+        "descriptions": {
+          "ja": "タグ付け",
+          "en": "Tag"
+        },
+        "sections": {
+          "ja": "マーク",
+          "en": "Marking"
+        }
+      },
+      {
+        "key": "0",
+        "descriptions": {
+          "ja": "タグ削除",
+          "en": "Remove tags"
+        },
+        "sections": {
+          "ja": "マーク",
+          "en": "Marking"
+        }
+      },
+      {
+        "key": "J",
+        "descriptions": {
+          "ja": "迷惑メール",
+          "en": "Mark as spam"
+        },
+        "sections": {
+          "ja": "マーク",
+          "en": "Marking"
+        }
+      },
+      {
+        "key": "Shift + J",
+        "descriptions": {
+          "ja": "迷惑解除",
+          "en": "Mark as not spam"
+        },
+        "sections": {
+          "ja": "マーク",
+          "en": "Marking"
+        }
+      },
+      {
+        "key": "K",
+        "descriptions": {
+          "ja": "スレッド無視",
+          "en": "Ignore thread"
+        },
+        "sections": {
+          "ja": "ニュース",
+          "en": "News"
+        }
+      },
+      {
+        "key": "Shift + K",
+        "descriptions": {
+          "ja": "サブスレッド無視",
+          "en": "Ignore subthread"
+        },
+        "sections": {
+          "ja": "ニュース",
+          "en": "News"
+        }
+      },
+      {
+        "key": "W",
+        "descriptions": {
+          "ja": "注目対象",
+          "en": "Watch thread"
+        },
+        "sections": {
+          "ja": "ニュース",
+          "en": "News"
+        }
+      },
+      {
+        "key": "Ctrl + Shift + K",
+        "descriptions": {
+          "ja": "フィルター",
+          "en": "Filter"
+        },
+        "sections": {
+          "ja": "検索",
+          "en": "Search"
+        }
+      },
+      {
+        "key": "Ctrl + G",
+        "descriptions": {
+          "ja": "次を検索",
+          "en": "Find next"
+        },
+        "sections": {
+          "ja": "検索",
+          "en": "Search"
+        }
+      },
+      {
+        "key": "Shift + F3",
+        "descriptions": {
+          "ja": "前を検索",
+          "en": "Find previous"
+        },
+        "sections": {
+          "ja": "検索",
+          "en": "Search"
+        }
+      },
+      {
+        "key": "F3",
+        "descriptions": {
+          "ja": "検索繰り返し",
+          "en": "Find again"
+        },
+        "sections": {
+          "ja": "検索",
+          "en": "Search"
+        }
+      },
+      {
+        "key": "Ctrl + A",
+        "descriptions": {
+          "ja": "選択",
+          "en": "Select"
+        },
+        "sections": {
+          "ja": "選択",
+          "en": "Select"
+        }
+      },
+      {
+        "key": "Ctrl + Shift + A",
+        "descriptions": {
+          "ja": "スレッド選択",
+          "en": "Select thread"
+        },
+        "sections": {
+          "ja": "選択",
+          "en": "Select"
+        }
+      },
+      {
+        "key": "Ctrl + C",
+        "descriptions": {
+          "ja": "コピー",
+          "en": "Copy"
+        },
+        "sections": {
+          "ja": "編集",
+          "en": "Edit"
+        }
+      },
+      {
+        "key": "Ctrl + X",
+        "descriptions": {
+          "ja": "切り取り",
+          "en": "Cut"
+        },
+        "sections": {
+          "ja": "編集",
+          "en": "Edit"
+        }
+      },
+      {
+        "key": "Ctrl + V",
+        "descriptions": {
+          "ja": "貼付",
+          "en": "Paste"
+        },
+        "sections": {
+          "ja": "編集",
+          "en": "Edit"
+        }
+      },
+      {
+        "key": "Ctrl + Z",
+        "descriptions": {
+          "ja": "元に戻す",
+          "en": "Undo"
+        },
+        "sections": {
+          "ja": "編集",
+          "en": "Edit"
+        }
+      },
+      {
+        "key": "Ctrl + Y",
+        "descriptions": {
+          "ja": "やり直す",
+          "en": "Redo"
+        },
+        "sections": {
+          "ja": "編集",
+          "en": "Edit"
+        }
+      },
+      {
+        "key": "Ctrl + T",
+        "descriptions": {
+          "ja": "等幅フォント",
+          "en": "Monospace font"
+        },
+        "sections": {
+          "ja": "書式",
+          "en": "Format"
+        }
+      },
+      {
+        "key": "Ctrl + B",
+        "descriptions": {
+          "ja": "太字",
+          "en": "Bold"
+        },
+        "sections": {
+          "ja": "書式",
+          "en": "Format"
+        }
+      },
+      {
+        "key": "Ctrl + I",
+        "descriptions": {
+          "ja": "斜体",
+          "en": "Italic"
+        },
+        "sections": {
+          "ja": "書式",
+          "en": "Format"
+        }
+      },
+      {
+        "key": "Ctrl + U",
+        "descriptions": {
+          "ja": "下線",
+          "en": "Underline"
+        },
+        "sections": {
+          "ja": "書式",
+          "en": "Format"
+        }
+      },
+      {
+        "key": "Ctrl + ]",
+        "descriptions": {
+          "ja": "インデント+",
+          "en": "Increase indent"
+        },
+        "sections": {
+          "ja": "書式",
+          "en": "Format"
+        }
+      },
+      {
+        "key": "Ctrl + [",
+        "descriptions": {
+          "ja": "インデント-",
+          "en": "Decrease indent"
+        },
+        "sections": {
+          "ja": "書式",
+          "en": "Format"
+        }
+      },
+      {
+        "key": "Ctrl + K",
+        "descriptions": {
+          "ja": "リンク",
+          "en": "Link"
+        },
+        "sections": {
+          "ja": "書式",
+          "en": "Format"
+        }
+      },
+      {
+        "key": "Ctrl + Shift + Y",
+        "descriptions": {
+          "ja": "スタイル中止",
+          "en": "Clear style"
+        },
+        "sections": {
+          "ja": "書式",
+          "en": "Format"
+        }
+      },
+      {
+        "key": "Shift + Enter",
+        "descriptions": {
+          "ja": "改行",
+          "en": "Line break"
+        },
+        "sections": {
+          "ja": "編集",
+          "en": "Edit"
+        }
+      }
     ]
   },
   "address-book": {
-    "title": "アドレス帳",
+    "titles": {
+      "ja": "アドレス帳",
+      "en": "Address Book"
+    },
     "shortcuts": [
-      { "key": "Ctrl + Shift + B", "description": "アドレス帳を開く", "section": "操作" },
-      { "key": "Ctrl + N", "description": "新規連絡先", "section": "操作" },
-      { "key": "Ctrl + M", "description": "メッセージ作成", "section": "操作" },
-      { "key": "↑ / ↓", "description": "移動", "section": "移動" },
-      { "key": "Enter", "description": "編集", "section": "操作" },
-      { "key": "F2", "description": "編集（表示）", "section": "操作" },
-      { "key": "Ctrl + I", "description": "プロパティ編集", "section": "操作" },
-      { "key": "Delete", "description": "削除", "section": "管理" },
-      { "key": "Ctrl + A", "description": "すべて選択", "section": "選択" },
-      { "key": "Ctrl + C", "description": "コピー", "section": "編集" },
-      { "key": "Ctrl + X", "description": "切り取り", "section": "編集" },
-      { "key": "Ctrl + V", "description": "貼付", "section": "編集" },
-      { "key": "Ctrl + F", "description": "クイック検索", "section": "検索" },
-      { "key": "Ctrl + Shift + F", "description": "詳細検索", "section": "検索" },
-      { "key": "Ctrl + P", "description": "印刷", "section": "操作" },
-      { "key": "Ctrl + S", "description": "保存", "section": "操作" },
-      { "key": "Tab / Shift + Tab", "description": "次/前フィールド", "section": "移動" },
-      { "key": "Ctrl + Z", "description": "元に戻す", "section": "編集" },
-      { "key": "Ctrl + Y", "description": "やり直す", "section": "編集" }
+      {
+        "key": "Ctrl + Shift + B",
+        "descriptions": {
+          "ja": "アドレス帳を開く",
+          "en": "Open address book"
+        },
+        "sections": {
+          "ja": "操作",
+          "en": "Operations"
+        }
+      },
+      {
+        "key": "Ctrl + N",
+        "descriptions": {
+          "ja": "新規連絡先",
+          "en": "New contact"
+        },
+        "sections": {
+          "ja": "操作",
+          "en": "Operations"
+        }
+      },
+      {
+        "key": "Ctrl + M",
+        "descriptions": {
+          "ja": "メッセージ作成",
+          "en": "Compose message"
+        },
+        "sections": {
+          "ja": "操作",
+          "en": "Operations"
+        }
+      },
+      {
+        "key": "↑ / ↓",
+        "descriptions": {
+          "ja": "移動",
+          "en": "Move"
+        },
+        "sections": {
+          "ja": "移動",
+          "en": "Move"
+        }
+      },
+      {
+        "key": "Enter",
+        "descriptions": {
+          "ja": "編集",
+          "en": "Edit"
+        },
+        "sections": {
+          "ja": "操作",
+          "en": "Operations"
+        }
+      },
+      {
+        "key": "F2",
+        "descriptions": {
+          "ja": "編集（表示）",
+          "en": "編集（表示）"
+        },
+        "sections": {
+          "ja": "操作",
+          "en": "Operations"
+        }
+      },
+      {
+        "key": "Ctrl + I",
+        "descriptions": {
+          "ja": "プロパティ編集",
+          "en": "Edit properties"
+        },
+        "sections": {
+          "ja": "操作",
+          "en": "Operations"
+        }
+      },
+      {
+        "key": "Delete",
+        "descriptions": {
+          "ja": "削除",
+          "en": "Delete"
+        },
+        "sections": {
+          "ja": "管理",
+          "en": "Management"
+        }
+      },
+      {
+        "key": "Ctrl + A",
+        "descriptions": {
+          "ja": "すべて選択",
+          "en": "Select all"
+        },
+        "sections": {
+          "ja": "選択",
+          "en": "Select"
+        }
+      },
+      {
+        "key": "Ctrl + C",
+        "descriptions": {
+          "ja": "コピー",
+          "en": "Copy"
+        },
+        "sections": {
+          "ja": "編集",
+          "en": "Edit"
+        }
+      },
+      {
+        "key": "Ctrl + X",
+        "descriptions": {
+          "ja": "切り取り",
+          "en": "Cut"
+        },
+        "sections": {
+          "ja": "編集",
+          "en": "Edit"
+        }
+      },
+      {
+        "key": "Ctrl + V",
+        "descriptions": {
+          "ja": "貼付",
+          "en": "Paste"
+        },
+        "sections": {
+          "ja": "編集",
+          "en": "Edit"
+        }
+      },
+      {
+        "key": "Ctrl + F",
+        "descriptions": {
+          "ja": "クイック検索",
+          "en": "Quick search"
+        },
+        "sections": {
+          "ja": "検索",
+          "en": "Search"
+        }
+      },
+      {
+        "key": "Ctrl + Shift + F",
+        "descriptions": {
+          "ja": "詳細検索",
+          "en": "Advanced search"
+        },
+        "sections": {
+          "ja": "検索",
+          "en": "Search"
+        }
+      },
+      {
+        "key": "Ctrl + P",
+        "descriptions": {
+          "ja": "印刷",
+          "en": "Print"
+        },
+        "sections": {
+          "ja": "操作",
+          "en": "Operations"
+        }
+      },
+      {
+        "key": "Ctrl + S",
+        "descriptions": {
+          "ja": "保存",
+          "en": "Save"
+        },
+        "sections": {
+          "ja": "操作",
+          "en": "Operations"
+        }
+      },
+      {
+        "key": "Tab / Shift + Tab",
+        "descriptions": {
+          "ja": "次/前フィールド",
+          "en": "Next/Previous field"
+        },
+        "sections": {
+          "ja": "移動",
+          "en": "Move"
+        }
+      },
+      {
+        "key": "Ctrl + Z",
+        "descriptions": {
+          "ja": "元に戻す",
+          "en": "Undo"
+        },
+        "sections": {
+          "ja": "編集",
+          "en": "Edit"
+        }
+      },
+      {
+        "key": "Ctrl + Y",
+        "descriptions": {
+          "ja": "やり直す",
+          "en": "Redo"
+        },
+        "sections": {
+          "ja": "編集",
+          "en": "Edit"
+        }
+      }
     ]
   },
   "calendar": {
-    "title": "カレンダー",
+    "titles": {
+      "ja": "カレンダー",
+      "en": "Calendar"
+    },
     "shortcuts": [
-      { "key": "Ctrl + I", "description": "新規イベント", "section": "操作" },
-      { "key": "Ctrl + D", "description": "新規タスク", "section": "操作" },
-      { "key": "↑ / ↓", "description": "日付移動", "section": "移動" },
-      { "key": "← / →", "description": "期間移動", "section": "移動" },
-      { "key": "Alt + ← / →", "description": "前/次の月", "section": "移動" },
-      { "key": "[ / ]", "description": "前/次の日/週/月", "section": "移動" },
-      { "key": "Home", "description": "今日に移動", "section": "移動" },
-      { "key": "Alt + End", "description": "今日に移動", "section": "移動" },
-      { "key": "D", "description": "日ビュー", "section": "表示" },
-      { "key": "W", "description": "週ビュー", "section": "表示" },
-      { "key": "M", "description": "月ビュー", "section": "表示" },
-      { "key": "L", "description": "リストビュー", "section": "表示" },
-      { "key": "Space", "description": "詳細表示", "section": "表示" },
-      { "key": "Enter", "description": "イベント編集", "section": "操作" },
-      { "key": "Delete", "description": "削除", "section": "管理" },
-      { "key": "Ctrl + E", "description": "編集", "section": "操作" },
-      { "key": "Tab / Shift + Tab", "description": "次/前イベント", "section": "移動" },
-      { "key": "Ctrl + Shift + K", "description": "ToDo 絞り込み", "section": "検索" },
-      { "key": "Esc", "description": "絞り込み解除", "section": "検索" },
-      { "key": "Ctrl + A", "description": "すべて選択", "section": "選択" },
-      { "key": "Ctrl + C", "description": "コピー", "section": "編集" },
-      { "key": "Ctrl + X", "description": "切り取り", "section": "編集" },
-      { "key": "Ctrl + V", "description": "貼付", "section": "編集" },
-      { "key": "Ctrl + S", "description": "保存", "section": "操作" },
-      { "key": "Ctrl + P", "description": "印刷", "section": "操作" },
-      { "key": "Ctrl + F", "description": "検索", "section": "検索" },
-      { "key": "Ctrl + Z", "description": "元に戻す", "section": "編集" },
-      { "key": "Ctrl + Y", "description": "やり直す", "section": "編集" }
+      {
+        "key": "Ctrl + I",
+        "descriptions": {
+          "ja": "新規イベント",
+          "en": "New event"
+        },
+        "sections": {
+          "ja": "操作",
+          "en": "Operations"
+        }
+      },
+      {
+        "key": "Ctrl + D",
+        "descriptions": {
+          "ja": "新規タスク",
+          "en": "New task"
+        },
+        "sections": {
+          "ja": "操作",
+          "en": "Operations"
+        }
+      },
+      {
+        "key": "↑ / ↓",
+        "descriptions": {
+          "ja": "日付移動",
+          "en": "Navigate date"
+        },
+        "sections": {
+          "ja": "移動",
+          "en": "Move"
+        }
+      },
+      {
+        "key": "← / →",
+        "descriptions": {
+          "ja": "期間移動",
+          "en": "Navigate period"
+        },
+        "sections": {
+          "ja": "移動",
+          "en": "Move"
+        }
+      },
+      {
+        "key": "Alt + ← / →",
+        "descriptions": {
+          "ja": "前/次の月",
+          "en": "Previous/Next month"
+        },
+        "sections": {
+          "ja": "移動",
+          "en": "Move"
+        }
+      },
+      {
+        "key": "[ / ]",
+        "descriptions": {
+          "ja": "前/次の日/週/月",
+          "en": "Previous/Next day/week/month"
+        },
+        "sections": {
+          "ja": "移動",
+          "en": "Move"
+        }
+      },
+      {
+        "key": "Home",
+        "descriptions": {
+          "ja": "今日に移動",
+          "en": "Go to today"
+        },
+        "sections": {
+          "ja": "移動",
+          "en": "Move"
+        }
+      },
+      {
+        "key": "Alt + End",
+        "descriptions": {
+          "ja": "今日に移動",
+          "en": "Go to today"
+        },
+        "sections": {
+          "ja": "移動",
+          "en": "Move"
+        }
+      },
+      {
+        "key": "D",
+        "descriptions": {
+          "ja": "日ビュー",
+          "en": "Day view"
+        },
+        "sections": {
+          "ja": "表示",
+          "en": "View"
+        }
+      },
+      {
+        "key": "W",
+        "descriptions": {
+          "ja": "週ビュー",
+          "en": "Week view"
+        },
+        "sections": {
+          "ja": "表示",
+          "en": "View"
+        }
+      },
+      {
+        "key": "M",
+        "descriptions": {
+          "ja": "月ビュー",
+          "en": "Month view"
+        },
+        "sections": {
+          "ja": "表示",
+          "en": "View"
+        }
+      },
+      {
+        "key": "L",
+        "descriptions": {
+          "ja": "リストビュー",
+          "en": "List view"
+        },
+        "sections": {
+          "ja": "表示",
+          "en": "View"
+        }
+      },
+      {
+        "key": "Space",
+        "descriptions": {
+          "ja": "詳細表示",
+          "en": "Show details"
+        },
+        "sections": {
+          "ja": "表示",
+          "en": "View"
+        }
+      },
+      {
+        "key": "Enter",
+        "descriptions": {
+          "ja": "イベント編集",
+          "en": "Edit event"
+        },
+        "sections": {
+          "ja": "操作",
+          "en": "Operations"
+        }
+      },
+      {
+        "key": "Delete",
+        "descriptions": {
+          "ja": "削除",
+          "en": "Delete"
+        },
+        "sections": {
+          "ja": "管理",
+          "en": "Management"
+        }
+      },
+      {
+        "key": "Ctrl + E",
+        "descriptions": {
+          "ja": "編集",
+          "en": "Edit"
+        },
+        "sections": {
+          "ja": "操作",
+          "en": "Operations"
+        }
+      },
+      {
+        "key": "Tab / Shift + Tab",
+        "descriptions": {
+          "ja": "次/前イベント",
+          "en": "Next/Previous event"
+        },
+        "sections": {
+          "ja": "移動",
+          "en": "Move"
+        }
+      },
+      {
+        "key": "Ctrl + Shift + K",
+        "descriptions": {
+          "ja": "ToDo 絞り込み",
+          "en": "Filter tasks"
+        },
+        "sections": {
+          "ja": "検索",
+          "en": "Search"
+        }
+      },
+      {
+        "key": "Esc",
+        "descriptions": {
+          "ja": "絞り込み解除",
+          "en": "Clear filter"
+        },
+        "sections": {
+          "ja": "検索",
+          "en": "Search"
+        }
+      },
+      {
+        "key": "Ctrl + A",
+        "descriptions": {
+          "ja": "すべて選択",
+          "en": "Select all"
+        },
+        "sections": {
+          "ja": "選択",
+          "en": "Select"
+        }
+      },
+      {
+        "key": "Ctrl + C",
+        "descriptions": {
+          "ja": "コピー",
+          "en": "Copy"
+        },
+        "sections": {
+          "ja": "編集",
+          "en": "Edit"
+        }
+      },
+      {
+        "key": "Ctrl + X",
+        "descriptions": {
+          "ja": "切り取り",
+          "en": "Cut"
+        },
+        "sections": {
+          "ja": "編集",
+          "en": "Edit"
+        }
+      },
+      {
+        "key": "Ctrl + V",
+        "descriptions": {
+          "ja": "貼付",
+          "en": "Paste"
+        },
+        "sections": {
+          "ja": "編集",
+          "en": "Edit"
+        }
+      },
+      {
+        "key": "Ctrl + S",
+        "descriptions": {
+          "ja": "保存",
+          "en": "Save"
+        },
+        "sections": {
+          "ja": "操作",
+          "en": "Operations"
+        }
+      },
+      {
+        "key": "Ctrl + P",
+        "descriptions": {
+          "ja": "印刷",
+          "en": "Print"
+        },
+        "sections": {
+          "ja": "操作",
+          "en": "Operations"
+        }
+      },
+      {
+        "key": "Ctrl + F",
+        "descriptions": {
+          "ja": "検索",
+          "en": "Search"
+        },
+        "sections": {
+          "ja": "検索",
+          "en": "Search"
+        }
+      },
+      {
+        "key": "Ctrl + Z",
+        "descriptions": {
+          "ja": "元に戻す",
+          "en": "Undo"
+        },
+        "sections": {
+          "ja": "編集",
+          "en": "Edit"
+        }
+      },
+      {
+        "key": "Ctrl + Y",
+        "descriptions": {
+          "ja": "やり直す",
+          "en": "Redo"
+        },
+        "sections": {
+          "ja": "編集",
+          "en": "Edit"
+        }
+      }
     ]
   },
   "tasks": {
-    "title": "タスク",
+    "titles": {
+      "ja": "タスク",
+      "en": "Tasks"
+    },
     "shortcuts": [
-      { "key": "Ctrl + D", "description": "新規タスク", "section": "操作" },
-      { "key": "↑ / ↓", "description": "移動", "section": "移動" },
-      { "key": "[ / ]", "description": "前/次のタスク", "section": "移動" },
-      { "key": "Home", "description": "先頭へ", "section": "移動" },
-      { "key": "End", "description": "末尾へ", "section": "移動" },
-      { "key": "Enter", "description": "タスク編集", "section": "操作" },
-      { "key": "F2", "description": "編集（表示）", "section": "操作" },
-      { "key": "Delete", "description": "削除", "section": "管理" },
-      { "key": "Space", "description": "完了切替", "section": "管理" },
-      { "key": "Ctrl + Shift + K", "description": "絞り込み", "section": "検索" },
-      { "key": "Esc", "description": "絞り込み解除", "section": "検索" },
-      { "key": "Ctrl + A", "description": "すべて選択", "section": "選択" },
-      { "key": "Ctrl + C", "description": "コピー", "section": "編集" },
-      { "key": "Ctrl + X", "description": "切り取り", "section": "編集" },
-      { "key": "Ctrl + V", "description": "貼付", "section": "編集" },
-      { "key": "Ctrl + S", "description": "保存", "section": "操作" },
-      { "key": "Ctrl + P", "description": "印刷", "section": "操作" },
-      { "key": "Ctrl + F", "description": "検索", "section": "検索" },
-      { "key": "Tab / Shift + Tab", "description": "次/前フィールド", "section": "移動" },
-      { "key": "Ctrl + Z", "description": "元に戻す", "section": "編集" },
-      { "key": "Ctrl + Y", "description": "やり直す", "section": "編集" }
+      {
+        "key": "Ctrl + D",
+        "descriptions": {
+          "ja": "新規タスク",
+          "en": "New task"
+        },
+        "sections": {
+          "ja": "操作",
+          "en": "Operations"
+        }
+      },
+      {
+        "key": "↑ / ↓",
+        "descriptions": {
+          "ja": "移動",
+          "en": "Move"
+        },
+        "sections": {
+          "ja": "移動",
+          "en": "Move"
+        }
+      },
+      {
+        "key": "[ / ]",
+        "descriptions": {
+          "ja": "前/次のタスク",
+          "en": "前/次のタスク"
+        },
+        "sections": {
+          "ja": "移動",
+          "en": "Move"
+        }
+      },
+      {
+        "key": "Home",
+        "descriptions": {
+          "ja": "先頭へ",
+          "en": "Home"
+        },
+        "sections": {
+          "ja": "移動",
+          "en": "Move"
+        }
+      },
+      {
+        "key": "End",
+        "descriptions": {
+          "ja": "末尾へ",
+          "en": "End"
+        },
+        "sections": {
+          "ja": "移動",
+          "en": "Move"
+        }
+      },
+      {
+        "key": "Enter",
+        "descriptions": {
+          "ja": "タスク編集",
+          "en": "タスク編集"
+        },
+        "sections": {
+          "ja": "操作",
+          "en": "Operations"
+        }
+      },
+      {
+        "key": "F2",
+        "descriptions": {
+          "ja": "編集（表示）",
+          "en": "編集（表示）"
+        },
+        "sections": {
+          "ja": "操作",
+          "en": "Operations"
+        }
+      },
+      {
+        "key": "Delete",
+        "descriptions": {
+          "ja": "削除",
+          "en": "Delete"
+        },
+        "sections": {
+          "ja": "管理",
+          "en": "Management"
+        }
+      },
+      {
+        "key": "Space",
+        "descriptions": {
+          "ja": "完了切替",
+          "en": "完了切替"
+        },
+        "sections": {
+          "ja": "管理",
+          "en": "Management"
+        }
+      },
+      {
+        "key": "Ctrl + Shift + K",
+        "descriptions": {
+          "ja": "絞り込み",
+          "en": "絞り込み"
+        },
+        "sections": {
+          "ja": "検索",
+          "en": "Search"
+        }
+      },
+      {
+        "key": "Esc",
+        "descriptions": {
+          "ja": "絞り込み解除",
+          "en": "Clear filter"
+        },
+        "sections": {
+          "ja": "検索",
+          "en": "Search"
+        }
+      },
+      {
+        "key": "Ctrl + A",
+        "descriptions": {
+          "ja": "すべて選択",
+          "en": "Select all"
+        },
+        "sections": {
+          "ja": "選択",
+          "en": "Select"
+        }
+      },
+      {
+        "key": "Ctrl + C",
+        "descriptions": {
+          "ja": "コピー",
+          "en": "Copy"
+        },
+        "sections": {
+          "ja": "編集",
+          "en": "Edit"
+        }
+      },
+      {
+        "key": "Ctrl + X",
+        "descriptions": {
+          "ja": "切り取り",
+          "en": "Cut"
+        },
+        "sections": {
+          "ja": "編集",
+          "en": "Edit"
+        }
+      },
+      {
+        "key": "Ctrl + V",
+        "descriptions": {
+          "ja": "貼付",
+          "en": "Paste"
+        },
+        "sections": {
+          "ja": "編集",
+          "en": "Edit"
+        }
+      },
+      {
+        "key": "Ctrl + S",
+        "descriptions": {
+          "ja": "保存",
+          "en": "Save"
+        },
+        "sections": {
+          "ja": "操作",
+          "en": "Operations"
+        }
+      },
+      {
+        "key": "Ctrl + P",
+        "descriptions": {
+          "ja": "印刷",
+          "en": "Print"
+        },
+        "sections": {
+          "ja": "操作",
+          "en": "Operations"
+        }
+      },
+      {
+        "key": "Ctrl + F",
+        "descriptions": {
+          "ja": "検索",
+          "en": "Search"
+        },
+        "sections": {
+          "ja": "検索",
+          "en": "Search"
+        }
+      },
+      {
+        "key": "Tab / Shift + Tab",
+        "descriptions": {
+          "ja": "次/前フィールド",
+          "en": "Next/Previous field"
+        },
+        "sections": {
+          "ja": "移動",
+          "en": "Move"
+        }
+      },
+      {
+        "key": "Ctrl + Z",
+        "descriptions": {
+          "ja": "元に戻す",
+          "en": "Undo"
+        },
+        "sections": {
+          "ja": "編集",
+          "en": "Edit"
+        }
+      },
+      {
+        "key": "Ctrl + Y",
+        "descriptions": {
+          "ja": "やり直す",
+          "en": "Redo"
+        },
+        "sections": {
+          "ja": "編集",
+          "en": "Edit"
+        }
+      }
     ]
   }
 }

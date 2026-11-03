@@ -5,6 +5,17 @@ const searchInput = document.querySelector('#shortcut-search');
 const shortcutList = document.querySelector('#shortcut-list');
 let originalHtml = ''; // Store original HTML to restore after search
 
+// Language detection
+const userLanguage = navigator.language.split('-')[0]; // Get base language (e.g., 'ja', 'en')
+const supportedLanguages = ['ja', 'en'];
+const currentLanguage = supportedLanguages.includes(userLanguage) ? userLanguage : 'en';
+
+// Helper function to get translated text
+function getText(translations, fallback = '') {
+  if (!translations) return fallback;
+  return translations[currentLanguage] || translations['en'] || Object.values(translations)[0] || fallback;
+}
+
 function escapeHtml(value) {
   return value
     .replace(/&/g, '&amp;')
@@ -19,43 +30,50 @@ async function loadData() {
   const data = await response.json();
   const contextInfo = data[selectedContext] || data.common;
 
-  contextLabel.textContent = `現在のコンテキスト: ${contextInfo.title}`;
+  const contextTitle = getText(contextInfo.titles, contextInfo.title || '');
+  const emptyMessage = currentLanguage === 'ja' ? '現在のコンテキスト: ' : 'Current context: ';
+  contextLabel.textContent = `${emptyMessage}${contextTitle}`;
   renderGroups(contextInfo, data);
 }
 
 function renderGroups(contextInfo, data) {
   const groups = [];
 
-  if (contextInfo && contextInfo.title) {
-    groups.push({ title: contextInfo.title, items: contextInfo.shortcuts || [] });
+  if (contextInfo && contextInfo.titles) {
+    groups.push({ titles: contextInfo.titles, items: contextInfo.shortcuts || [] });
   }
 
   const commonGroup = data.common;
   if (commonGroup && selectedContext !== 'common') {
-    groups.push({ title: commonGroup.title, items: commonGroup.shortcuts || [] });
+    groups.push({ titles: commonGroup.titles, items: commonGroup.shortcuts || [] });
   }
 
   const currentGroups = groups.filter((group) => group.items.length > 0);
 
   if (currentGroups.length === 0) {
-    shortcutList.innerHTML = '<div class="empty-state">該当するショートカットはありません。</div>';
+    const emptyMessage = currentLanguage === 'ja' ? '該当するショートカットはありません。' : 'No shortcuts found.';
+    shortcutList.innerHTML = `<div class="empty-state">${emptyMessage}</div>`;
     originalHtml = '';
     return;
   }
 
   const html = currentGroups.map((group) => {
+    const groupTitle = getText(group.titles, 'Shortcuts');
+    
     const items = group.items.map((item) => {
+      const description = getText(item.descriptions, item.description || '');
+      const section = getText(item.sections, item.section || '');
       return `
         <li class="shortcut-item">
           <span class="key">${escapeHtml(item.key)}</span>
-          <span class="description">${escapeHtml(item.description)}</span>
+          <span class="description">${escapeHtml(description)}</span>
         </li>
       `;
     }).join('');
 
     return `
-      <section class="group" aria-label="${escapeHtml(group.title)}">
-        <h2>${escapeHtml(group.title)}</h2>
+      <section class="group" aria-label="${escapeHtml(groupTitle)}">
+        <h2>${escapeHtml(groupTitle)}</h2>
         <ul class="shortcut-items">${items}</ul>
       </section>
     `;
@@ -109,7 +127,8 @@ function applyFilter() {
 
   // Show empty state if no results
   if (!hasVisibleItems) {
-    shortcutList.innerHTML = '<div class="empty-state">該当するショートカットはありません。</div>';
+    const noResultsMessage = currentLanguage === 'ja' ? '検索結果がありません。' : 'No results found.';
+    shortcutList.innerHTML = `<div class="empty-state">${noResultsMessage}</div>`;
   }
 }
 
@@ -120,4 +139,27 @@ document.addEventListener('keydown', (event) => {
 });
 
 searchInput.addEventListener('input', applyFilter);
+
+// Initialize UI text based on current language
+function initializeUIText() {
+  const dialogTitle = document.querySelector('#dialog-title');
+  const searchLabel = document.querySelector('.search-label');
+  const searchInput = document.querySelector('#shortcut-search');
+  
+  if (currentLanguage === 'ja') {
+    dialogTitle.textContent = 'Thunderbird ショートカット';
+    searchLabel.textContent = 'ショートカットを検索';
+    searchInput.placeholder = '例: 返信';
+    searchInput.setAttribute('aria-label', 'ショートカットを検索');
+    document.documentElement.lang = 'ja';
+  } else {
+    dialogTitle.textContent = 'Thunderbird Shortcuts';
+    searchLabel.textContent = 'Search shortcuts';
+    searchInput.placeholder = 'e.g., Reply';
+    searchInput.setAttribute('aria-label', 'Search shortcuts');
+    document.documentElement.lang = 'en';
+  }
+}
+
+initializeUIText();
 loadData();
