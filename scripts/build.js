@@ -27,7 +27,7 @@ const INCLUDE_PATTERNS = [
   'shortcut-dialog.html',
   'shortcut-dialog.css',
   'shortcut-dialog.js',
-  'data/**/*',
+  'data/',
   'LICENSE',
   'README.md',
 ];
